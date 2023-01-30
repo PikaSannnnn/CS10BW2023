@@ -1,4 +1,9 @@
 # CS10BW2023
+## GitHub for SI
+
+## Setting up a GitHub Key
+
+## Using GitHub
 
 ## Useful Commands:
 **Compiling the Code**
