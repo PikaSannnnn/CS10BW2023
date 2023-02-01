@@ -1,4 +1,9 @@
 # CS10BW2023
+## Table of Contents
+* (GitHub for SI)[#github-for-si]
+* (Setting up a GitHub Key)[#setting-up-a-github-key]
+* (Using GitHub)[#using-github]
+
 ## GitHub for SI
 There's quite a lot with GitHub that is really important to know. The first and foremost is the fact that GitHub uses this thing called `git`. From your terminal you will do everything through this `git` command. These commands will be explained in the **[Using GitHub](https://github.com/PikaSannnnn/CS10BW2023#using-github)** section.  
 The main importance in this section is how GitHub will be used for SI. From now on, what you'll do when coming to session is to open this GitHub and stay on the main page. Likewise, open your version of the repository that is on either your local machine or the cs010b server. You will be coding using the template files that I provide or we will continue with a previous activity.  
@@ -17,7 +22,34 @@ The other option is to permanently link a specific server by generating a ssh ke
 Click “New SSH key”. Paste the public key into field “Key”, and give it a name you like.
 4. With this, you can now just `git clone <ssh link>` and similar git commands easily as long as you used the **ssh link** (which can be found in the same green "code" button, but under the `ssh` tab instead.
 ## Using GitHub
+GitHub is useful for version control. Everyone will have their own version with their own branches. To start, you'll need to clone this repo:
+```
+git clone <https/ssh link>
+```
 
+Next, you'll need to create a branch:
+```
+git branch <NetID>
+```
+Example: `git branch adoo001`  
+You can check if the branch was successfully created if you see your branch name when typing:
+```
+git branch
+```
+
+You will then need to enter your branch with:
+```
+git branch <branch name>
+```
+You will know which branch you are currently in when typing `git branch`. An asterick * will be next to the branch name that you are currently in. Make sure you are in your **NetID** branch.
+
+From now on, changes you make will be on this branch only. If there's ever a new file or an updated file that *you have not edited*, I will announce it and you will be able to see it in main.  
+First, make sure you're in your branch. Then type this:
+```
+git rebase main
+```
+
+You don't need to know what any of these commands actually mean yet, but I'd suggest you try reading up on them sometime.
 ## Useful Commands:
 ### Compiling the Code
 MacOS/Linux:  
