@@ -54,6 +54,59 @@ First, make sure you're in your branch. Then type this:
 git rebase main
 ```
 
+If you or someone posted changes to github on your branch, you can use:
+```
+git pull
+```
+This pulls the changes that were made and commited to the repo for that branch.
+
+You've seen or heard "commit" a couple of times now, that's because you have to commit changes to push onto the repo. First you want to add the changes you'd like to have show up on the repo.  
+Type the following to see the status of all files and to see what has been tracked and what has been changed.
+```
+git status
+```
+
+Now, you need to add changes to be committed. You'll have to manually input the files.
+```
+git add <file1> <file2> ...
+```
+However, if you know everything you want on the repo is there, you can type this instead
+```
+git add .
+```
+Or
+```
+git add *
+```
+As explained in a later section, `*` means "everything". However, there are files and directories that are hidden. These files have a `.` in front and typically aren't added when doing `*`. If you have files like `.gitignore`, or your own meta files that are hidden and you want these to be added along with everything, use `.` instead.
+
+Now, you can commit with the following code:
+```
+git commit
+```
+This will open a vim or nano editor in your termina. You can add a title on the first line, and the next few lines are descriptions. To exit out of **`nano`**, you would press `ctrl + x`. To exit out of **`vim`**, which is what you'll most likely be in, press `esc`, then `:`, then enter `wq` and press enter. You don't need to know what any of this does, but it may be nice to learn eventually, so I'd suggest learning about it.
+
+If you don't want to go through the whole process of titling and describing, you can just do this instead
+```
+git commit -m "<message>"
+```
+This way, you can type a short message instead in one line in between the quotes and be done. Be aware there is a character limit.
+
+Now that you've committed, you will need to push with
+```
+git push
+```
+
+If there's ever a time you need to revert back to whatever was saved on the repo and revert **ALL** changes **AND** commits you've made since that version, you can type this:
+```
+git reset --hard
+```
+
+But what if we just want to undo the last **commit** instead of everything. You can type this instead:
+```
+git reset --soft
+```
+
 You don't need to know what any of these commands actually mean yet, but I'd suggest you try reading up on them sometime.
 ## Useful Commands:
 ### Compiling the Code
