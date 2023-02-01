@@ -2,10 +2,16 @@
 ## Table of Contents
 * [GitHub for SI](#github-for-si)
 * [Setting up a GitHub Key](#setting-up-a-github-key)
-* [Using GitHub](#using-github])
+* [Using GitHub](#using-github)
+* [Useful Commands](#useful-commands)
+  * [Compiling the Code](#compiling-the-code)
+  * [Running the Code](#running-the-code)
+  * [Terminal Commands](#terminal-commands)
+* [Filestreams](#file-streams)
+* [Command Line Args](#command-arguments)
 
 ## GitHub for SI
-There's quite a lot with GitHub that is really important to know. The first and foremost is the fact that GitHub uses this thing called `git`. From your terminal you will do everything through this `git` command. These commands will be explained in the **[Using GitHub](https://github.com/PikaSannnnn/CS10BW2023#using-github)** section.  
+There's quite a lot with GitHub that is really important to know. The first and foremost is the fact that GitHub uses this thing called `git`. From your terminal you will do everything through this `git` command. These commands will be explained in the **[Using GitHub](#using-github)** section.  
 The main importance in this section is how GitHub will be used for SI. From now on, what you'll do when coming to session is to open this GitHub and stay on the main page. Likewise, open your version of the repository that is on either your local machine or the cs010b server. You will be coding using the template files that I provide or we will continue with a previous activity.  
 
 **Make sure that you are ALWAYS working on your own branch.**
