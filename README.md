@@ -19,7 +19,7 @@ The main importance in this section is how GitHub will be used for SI. From now 
 I will also be putting solutions to the code to practice activities that we *have gone over and have already seen the solution in session*.
  
 ## Setting up a GitHub Key
-Whenever you wish to push something, you have to login. As of 2020, for absolutely no reason, you cannot use your own GitHub password anymore. Instead, you have to use a token key. You can go (here)[https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token] to setup a key. Keep this safe with you at all times; otherwise, you'll have to keep making new keys, and no one likes that.  
+Whenever you wish to push something, you have to login. As of 2020, for absolutely no reason, you cannot use your own GitHub password anymore. Instead, you have to use a token key. You can go [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to setup a key. Keep this safe with you at all times; otherwise, you'll have to keep making new keys, and no one likes that.  
 
 The other option is to permanently link a specific server by generating a ssh key:
 1. You can do this by typing `ssh-keygen -t rsa` to generate a key pair  
