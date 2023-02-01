@@ -44,7 +44,7 @@ git branch
 
 You will then need to enter your branch with:
 ```
-git branch <branch name>
+git checkout <branch name>
 ```
 You will know which branch you are currently in when typing `git branch`. An asterick * will be next to the branch name that you are currently in. Make sure you are in your **NetID** branch.
 
