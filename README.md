@@ -97,6 +97,8 @@ Now that you've committed, you will need to push with
 git push
 ```
 
+**The following two, you will most likely never use.**
+
 If there's ever a time you need to revert back to whatever was saved on the repo and revert **ALL** changes **AND** commits you've made since that version, you can type this:
 ```
 git reset --hard
