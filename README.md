@@ -1,8 +1,8 @@
 # CS10BW2023
 ## Table of Contents
-* (GitHub for SI)[#github-for-si]
-* (Setting up a GitHub Key)[#setting-up-a-github-key]
-* (Using GitHub)[#using-github]
+* [GitHub for SI](#github-for-si)
+* [Setting up a GitHub Key](#setting-up-a-github-key)
+* [Using GitHub](#using-github])
 
 ## GitHub for SI
 There's quite a lot with GitHub that is really important to know. The first and foremost is the fact that GitHub uses this thing called `git`. From your terminal you will do everything through this `git` command. These commands will be explained in the **[Using GitHub](https://github.com/PikaSannnnn/CS10BW2023#using-github)** section.  
