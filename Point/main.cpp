@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include "../sifunc.h"
 
 using namespace std;
 
@@ -91,4 +90,6 @@ int main() {
 	Point C(3, 4);
 
 	// Test the functions here vvvvv
+	int a[5] = {1, 2, 3, 4, 3};
+	cout << compsif::Max(a) << endl;
 }
