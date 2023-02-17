@@ -1,93 +1,76 @@
 #include <iostream>
-#include <cmath>
+#include "point.h"
 
 using namespace std;
 
-class Point {
-protected:
-	double x, y;
-public:
-	// Constructors
-	Point() : x(0), y(0) { }
-	Point(double x) { this->x = x; }
-	Point(double, double);
+// As per Professor Pat Miller's, here is an example code and scenario for adding to the end, inserting, and deleting elements in dynamic arrays.
+// I will not explain any of the code, rather you will look at it and **DRAW** it out and form your own understanding
+// You are given permission to take *Inspiration* from and/or copy this code under one condition:
+	// *** You need to be able to explain what the code is doing either in a high-end level perspective or line-by-line. ***
+		// If you can't, but you copy this code anyways, it will be considered academic dishonesty.
+// Cheating doesn't help you if you can't understand it. You will only suffer from it.
 
-	// Mutator Function
-	void Scale(double);
+void PrintArray(Point arr[], int c, int s) {
+	cout << "[" << s << "/" << c << "]" << endl;
 
-	// Accessor Functions
-	Point Add(double a) const { return Point(x + a, y + a); }
-	Point Add(double x, double y) const { return Point(this->x + x, this->y + y); }
-	Point Sub(double a) const { return Point(x + a, y + a); }
-	Point Sub(double x, double y) const { return Point(this->x - x, this->y - y); }
-	Point Mult(double a) const { return Point(x + a, y + a); }
-	Point Mult(double x, double y) const {return Point(this->x * x, this->y * y); }
-	Point Div(double a) const { return Point(x + a, y + a); }
-	Point Div(double x, double y) const { return Point(this->x / x, this->y / y); }
-	void Print() const { cout << "(" << x << ", " << y << ")" << endl; }
-	double Vectorize() const;
-	double Vectorize(const Point&) const;
-
-	// Overloads
-	Point operator+(const Point&);
-	Point operator-(const Point&);
-	Point operator*(const Point&);
-	Point operator/(const Point&);
-	bool operator<(const Point&);
-	bool operator>(const Point&);
-	bool operator==(const Point&);
-	friend ostream& operator<<(ostream& out, Point& p) {
-		out << "(" << p.x << ", " << p.y << ")";
-		return out;
+	cout << "===========" << endl;
+	for (int i = 0; i < c; i++) {
+		cout << arr[i] << endl;
+		if (i == s-1) {
+			cout << "-----------" << endl;
+		}
 	}
-};
-
-Point::Point(double x, double y) {
-	this->x = x;
-	this->y = y;
-}
-
-void Point::Scale(double s) {
-	this->x *= s;
-	this->y *= s;
-}
-
-double Point::Vectorize() const {
-	return sqrt((x * x) + (y * y));
-}
-
-double Point::Vectorize(const Point& other) const {
-	double x = this->x - other.x;
-	double y = this->y - other.y;
-	return sqrt((x * x) + (y * y));
-}
-
-Point Point::operator+(const Point& rhs) {
-	return Point(x + rhs.x, y + rhs.y);
-}
-Point Point::operator-(const Point& rhs) {
-	return Point(x - rhs.x, y - rhs.y);
-}
-Point Point::operator*(const Point& rhs) {
-	return Point(x * rhs.x, y * rhs.y);
-}
-Point Point::operator/(const Point& rhs) {
-	return Point(x / rhs.x, y / rhs.y);
-}
-bool Point::operator<(const Point& rhs) {
-	return Vectorize() < rhs.Vectorize();	// Be aware, rhs is a const... any functions it calls need to be const too!
-}
-bool Point::operator>(const Point& rhs) {
-	return Vectorize() < rhs.Vectorize();
-}
-bool Point::operator==(const Point& rhs) {
-	return fabs(Vectorize() - rhs.Vectorize()) <= 0.001;	// floating point comparison
+	cout << "===========" << endl << endl;
 }
 
 int main() {
-	Point A;
-	Point B(1);
-	Point C(3, 4);
+	int cap = 4, sz = 0;
+	Point* line = new Point[cap];
+	for (int i = 0; i < 13; i++) {
+		if (cap == sz) {
+			Point* newLine = new Point[cap * 2];
+			for (int j = 0; j < sz; j++) {
+				newLine[j] = line[j];
+			}
 
-	// Test the functions here vvvvv
+			delete[] line;
+			line = newLine;
+			cap *= 2;
+		}
+		
+		line[i] = Point(i, i);
+		sz++;
+	}
+
+	for (int i = 0; i < 5; i++) {
+		int indx = i*13 % (sz + 1);
+		if (cap == sz) {
+			Point* newLine = new Point[cap * 2];
+			for (int j = 0; j < sz; j++) {
+				if (j >= indx) newLine[j+1] = line[j];
+				else newLine[j] = line[j];
+			}
+
+			delete[] line;
+			line = newLine;
+			cap *= 2;
+		}
+		else {
+			for (int j = sz + 1; j > indx; j--) {
+				line[j] = line[j-1];
+			}
+		}
+		
+		line[indx] = Point(i, i);
+		sz++;
+	}
+
+	for (int i = 0; i < 7; i++) {
+		int indx = i*13 % (sz + 1);
+		for (int j = indx; j < sz-1; j++) {
+			line[j] = line[j+1];
+		}
+
+		sz--;
+	}
 }
