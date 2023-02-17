@@ -3,9 +3,9 @@
 
 using namespace std;
 
-// As per Professor Pat Miller's, here is an example code and scenario for adding to the end, inserting, and deleting elements in dynamic arrays.
+// As per Professor Pat Miller's request, here is an example code and scenario for adding to the end, inserting, and deleting elements in dynamic arrays.
 // I will not explain any of the code, rather you will look at it and **DRAW** it out and form your own understanding
-// You are given permission to take *Inspiration* from and/or copy this code under one condition:
+// You are given permission to take *Inspiration* from and/or "copy" (without copy pasting) this code under one condition:
 	// *** You need to be able to explain what the code is doing either in a high-end level perspective or line-by-line. ***
 		// If you can't, but you copy this code anyways, it will be considered academic dishonesty.
 // Cheating doesn't help you if you can't understand it. You will only suffer from it.
