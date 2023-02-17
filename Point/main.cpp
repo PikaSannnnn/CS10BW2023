@@ -5,23 +5,11 @@ using namespace std;
 
 // As per Professor Pat Miller's request, here is an example code and scenario for adding to the end, inserting, and deleting elements in dynamic arrays.
 // I will not explain any of the code, rather you will look at it and **DRAW** it out and form your own understanding
-// You are given permission to take *Inspiration* from and/or "copy" (without copy pasting) this code under one condition:
+// You are given permission to take *Inspiration* from and/or "copy" (without copy pasting) this code under two conditions:
 	// *** You need to be able to explain what the code is doing either in a high-end level perspective or line-by-line. ***
 		// If you can't, but you copy this code anyways, it will be considered academic dishonesty.
-// Cheating doesn't help you if you can't understand it. You will only suffer from it.
-
-void PrintArray(Point arr[], int c, int s) {
-	cout << "[" << s << "/" << c << "]" << endl;
-
-	cout << "===========" << endl;
-	for (int i = 0; i < c; i++) {
-		cout << arr[i] << endl;
-		if (i == s-1) {
-			cout << "-----------" << endl;
-		}
-	}
-	cout << "===========" << endl << endl;
-}
+	// You will need to be able to implement it yourself by coding it *WITHOUT* looking at this code.
+// Copying doesn’t help you, especially if you can’t understand and learn from it. You will only suffer in the long run by doing this.
 
 int main() {
 	int cap = 4, sz = 0;
