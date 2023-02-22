@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// This is the example code for two (three) operations that are essential to Linked Lists.
+// This is the example code for two (three) operations that are essential to Linked Lists that we went over in session.
 // I will not explain any of the code, rather you will look at it and **DRAW** it out and form your own understanding
 // You are given permission to take *Inspiration* from and/or "copy" (without copy pasting) this code under two conditions:
 	// *** You need to be able to explain what the code is doing either in a high-end level perspective or line-by-line. ***
