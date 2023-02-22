@@ -38,37 +38,33 @@ namespace arrsif {
 
 }
 
-namespace lstsif {
+// namespace sortsif {
+//     template <typename T>
+//     vector<T> InsertSort(vector<T>& v, bool inplace = false) {
+//         vector<T> sorted;
+//         return sorted;
+//     }
+//     template <typename T>
+//     T* InsertSort(T arr[], int n, bool inplace = false) {
+//         return nullptr;
+//     }
+// }
 
-}
+// namespace compsif {
+//     template <typename T>
+//     T Max(const T& a, const T& b) {
+//         return (a > b) ? a : b;
+//     }
+//     template <typename T>
+//     T Max(const T arr[]) {
+//         size_t n = sizeof(arr) / sizeof(T);
+//         if (n == 0) throw std::range_error("compsif::Max(const T arr[]) cannot search in empty array");
 
-namespace sortsif {
-    template <typename T>
-    vector<T> InsertSort(vector<T>& v, bool inplace = false) {
-        vector<T> sorted;
-        return sorted;
-    }
-    template <typename T>
-    T* InsertSort(T arr[], int n, bool inplace = false) {
-        return nullptr;
-    }
-}
+//         T b = arr[0];
+//         for (size_t i = 1; i < n; i++) {
+//             if (arr[i] > b) b = arr[i];
+//         }
 
-namespace compsif {
-    template <typename T>
-    T Max(const T& a, const T& b) {
-        return (a > b) ? a : b;
-    }
-    template <typename T>
-    T Max(const T arr[]) {
-        size_t n = sizeof(arr) / sizeof(T);
-        if (n == 0) throw std::range_error("compsif::Max(const T arr[]) cannot search in empty array");
-
-        T b = arr[0];
-        for (size_t i = 1; i < n; i++) {
-            if (arr[i] > b) b = arr[i];
-        }
-
-        return b;
-    }
-}
+//         return b;
+//     }
+// }

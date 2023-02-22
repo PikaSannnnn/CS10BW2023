@@ -2,6 +2,14 @@
 
 using namespace std;
 
+// This is the example code for two (three) operations that are essential to Linked Lists.
+// I will not explain any of the code, rather you will look at it and **DRAW** it out and form your own understanding
+// You are given permission to take *Inspiration* from and/or "copy" (without copy pasting) this code under two conditions:
+	// *** You need to be able to explain what the code is doing either in a high-end level perspective or line-by-line. ***
+		// If you can't, but you copy this code anyways, it will be considered academic dishonesty.
+	// You will need to be able to implement it yourself by coding it *WITHOUT* looking at this code.
+// Copying doesn’t help you, especially if you can’t understand and learn from it. You will only suffer in the long run by doing this.
+
 struct node {
     int n;
     node* next;
