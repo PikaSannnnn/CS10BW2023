@@ -17,16 +17,17 @@ struct node {
 };
 
 int main() {
+    srand(0);
     node* head = 0;
     node* tail = 0;
 
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 11; i++) {
         if (!head) {
-            head = new node(i);
+            head = new node(rand() % 8);
             tail = head;
         }
         else {
-            node* newNode = new node(i);
+            node* newNode = new node(rand() % 8);
             tail->next = newNode;
             tail = newNode;
         }
@@ -44,6 +45,7 @@ int main() {
         while (currNode->next != tail) {
             currNode = currNode->next;
         }
+        
         delete tail;
         currNode->next = 0;
         tail = currNode;
@@ -52,6 +54,46 @@ int main() {
         delete head;
         head = 0;
         tail = 0;
+    }
+
+    currNode = head;
+    while (currNode) {
+        cout << currNode->n << " ";
+        currNode = currNode->next;
+    }
+    cout << endl;
+
+    currNode = head;
+    while (currNode) {
+        node* prevNode = currNode;
+        node* checkNode = currNode->next;
+
+        while (checkNode) {
+            if (checkNode->n == currNode->n) {
+                prevNode->next = checkNode->next;
+                delete checkNode;
+            }
+            else {
+                prevNode = prevNode->next;
+            }
+
+            checkNode = prevNode->next;
+        }
+
+        currNode = currNode->next;
+
+        // node* checkNode = currNode;
+        // while (checkNode->next) {
+        //     if (checkNode->next->n == currNode->n) {
+        //         node* delNode = checkNode->next;
+        //         checkNode->next = delNode->next;
+        //         delete delNode;
+        //     }
+        //     else {
+        //         checkNode = checkNode->next;
+        //     }
+        // }
+        // currNode = currNode->next;
     }
 
     currNode = head;
